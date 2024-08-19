@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h2>Quiz</h2>
+    <form action="/submitQuiz" method="post">
+        {{range .}}
+        <div class="question">
+            <p>{{.Question}}</p>
+            {{range $index, $option := .Options}}
+            <input type="radio" name="answer" value="{{.}}" required> {{.}}<br>
+            {{end}}
+        </div>
+        {{end}}
+        <button type="submit">Submit Quiz</button>
+    </form>
+</body>
+</html>
