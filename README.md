@@ -82,7 +82,7 @@ Welcome to the **Quiz Management System** project! This project is a web-based a
 3. Submit your answers and view the results.
 
 ## File Structure
-  ```bash
+   ```bash
 quiz-management-system/
 │
 ├── static/ # Static assets (CSS, JS)
